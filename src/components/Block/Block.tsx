@@ -1,13 +1,17 @@
+import React from 'react'
 import { clsx } from "clsx";
 
 interface Props {
-    clicked: boolean
-    handleClick: (row: number, col: number) => void
-    row: number
-    col: number
+    clicked: boolean;
+    handleClick: (row: number, col: number) => void;
+    row: number;
+    col: number;
 }
 
 const Block: React.FC<Props> = ({ clicked, handleClick, row, col }) => {
+    
+    console.log('rerender')
+
     return (
         <div
             className={clsx(
@@ -19,4 +23,4 @@ const Block: React.FC<Props> = ({ clicked, handleClick, row, col }) => {
     );
 };
 
-export default Block;
+export default React.memo(Block);
