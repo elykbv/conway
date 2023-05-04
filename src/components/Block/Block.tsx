@@ -2,7 +2,7 @@ import { clsx } from "clsx";
 
 interface Props {
     clicked: boolean
-    handleClick: () => void
+    handleClick: (row: number, col: number) => void
     row: number
     col: number
 }
